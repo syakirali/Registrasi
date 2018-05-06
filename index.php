@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,9 +21,9 @@
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">PMB Universitas Airlangga</h3>
+          <h3 class="masthead-brand"><a href="" style="text-decoration:none!important">PMB Universitas Airlangga</a></h3>
           <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Beranda</a>
+            <a class="nav-link active" href="">Beranda</a>
             <a class="nav-link" href="tampil.php">Tampil</a>
           </nav>
         </div>

@@ -28,11 +28,11 @@
       <div class="container col-md-6 col-sm-12 cover-container d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
           <div class="inner">
-            <a href="/registrasi">
+            <a href="/Registrasi">
               <h3 class="masthead-brand">PMB Universitas Airlangga</h3>
             </a>
             <nav class="nav nav-masthead justify-content-center">
-              <a class="nav-link" href="/registrasi">Beranda</a>
+              <a class="nav-link" href="/Registrasi">Beranda</a>
               <a class="nav-link" href="registrasi.php">Registrasi</a>
               <a class="nav-link active" href="tampil.php">Tampil</a>
             </nav>
