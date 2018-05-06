@@ -17,13 +17,16 @@
 // }
 // echo "</pre>";
 
+include_once 'checkAuth.php';
+echo auth() . '<br>';
+
 // session_start();
-// echo "<pre>";
-// print_r($_SESSION);
-// echo "cookie";
-// print_r($_COOKIE);
-// // session_unset();
-// echo "</pre>";
+echo "<pre>";
+print_r($_SESSION);
+echo "cookie";
+print_r($_COOKIE);
+// session_unset();
+echo "</pre>";
 
 
 ?>

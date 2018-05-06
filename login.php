@@ -11,20 +11,13 @@
       if ($sth->rowCount() == 1) {
         $user = $sth->fetch();
         if ($user['email'] == $_POST['email'] && $user['password'] == $_POST['katasandi']) {
-          $token = md5(date('Y-m-d'));
-          $sth = $koneksi->prepare("UPDATE users
-          SET `token`='{$token}'
-          WHERE email=':email' AND password=':katasandi'");
-          $sth->bindParam(':email', $_POST['email'], PDO::PARAM_STR, 100);
-          $sth->bindParam(':katasandi', $_POST['katasandi'], PDO::PARAM_STR, 100);
-          $sth->execute();
-
+          $token = md5(date('Y-m-d H:i:s'));
+          $sth2 = $koneksi->query("UPDATE users
+          SET token='{$token}'
+          WHERE email='{$_POST['email']}'");
           if (isset($_POST['simpan'])) {
             setcookie('ppmb_unair_token', $token);
             setcookie('ppmb_unair_email', $user['email']);
-            // echo "<pre>";
-            // print_r($_COOKIE);
-            // echo "</pre>";
             // die();
           } else {
             session_start();
@@ -58,7 +51,7 @@
   </head>
 
   <body class="text-center">
-    <form id="login_form" class="form-signin" method="post" target="login.php">
+    <form id="login_form" class="form-signin" method="post">
       <a class="mb-4" href="/Registrasi">
         <img src="gambar/icon.png" alt="" width="72" height="72">
       </a>
