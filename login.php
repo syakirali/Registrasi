@@ -15,9 +15,10 @@
           $sth2 = $koneksi->query("UPDATE users
           SET token='{$token}'
           WHERE email='{$_POST['email']}'");
+
           if (isset($_POST['simpan'])) {
-            setcookie('ppmb_unair_token', $token);
-            setcookie('ppmb_unair_email', $user['email']);
+            setcookie('ppmb_unair_token', $token, time()+86400, "/", $_SERVER['HTTP_HOST'], 0, 1);
+            setcookie('ppmb_unair_email', $user['email'], time()+86400, "/", $_SERVER['HTTP_HOST'], 0, 1);
             // die();
           } else {
             session_start();

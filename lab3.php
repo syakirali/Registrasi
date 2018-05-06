@@ -18,10 +18,11 @@
 // echo "</pre>";
 
 include_once 'checkAuth.php';
-echo auth() . '<br>';
-
-// session_start();
+// echo auth() . '<br>';
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+session_start();
 echo "<pre>";
+print_r($actual_link);
 print_r($_SESSION);
 echo "cookie";
 print_r($_COOKIE);
